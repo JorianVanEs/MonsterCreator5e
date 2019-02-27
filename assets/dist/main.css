@@ -1,0 +1,331 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);@import url(https://fonts.googleapis.com/css?family=Crimson+Text);body {
+  margin: 0;
+  width: 100%;
+  background-color: Whitesmoke;
+  font-family: 'Lato', sans-serif; }
+  body #app #page header {
+    width: 100%;
+    height: 50px;
+    background: #FF5151;
+    display: flex;
+    justify-content: space-between; }
+    body #app #page header h1 {
+      color: white;
+      margin: 0;
+      font-size: 30px;
+      padding: 5px 20px; }
+    body #app #page header p {
+      margin-right: 20px;
+      margin-top: 15px;
+      color: white; }
+  body #app #page #selector {
+    cursor: pointer;
+    user-select: none; }
+    body #app #page #selector #selection {
+      width: 200px;
+      height: 20px;
+      border: 1px #aaa solid;
+      display: flex;
+      padding: 5px;
+      background-color: white; }
+      body #app #page #selector #selection p {
+        margin: 0;
+        flex: 1; }
+    body #app #page #selector #choices {
+      padding: 0;
+      list-style: none;
+      margin: 0;
+      position: absolute;
+      z-index: 99; }
+      body #app #page #selector #choices li {
+        width: 200px;
+        height: 20px;
+        padding: 5px;
+        border: 1px solid #aaa;
+        border-top: none;
+        background-color: white;
+        display: flex; }
+        body #app #page #selector #choices li:hover {
+          background-color: #FF9E9E; }
+    body #app #page #selector #icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 20px; }
+    body #app #page #selector .Regular {
+      background-image: url(img/35d6df48e1fc002cdf18e818b8a7e3f6.svg); }
+    body #app #page #selector .attack {
+      background-image: url(img/a6bfa0e5fa935e5d493de9dec09b2b69.svg); }
+    body #app #page #selector .reaction {
+      background-image: url(img/71875ddd0c4c8cbc32bc473e4b7f9d0e.svg); }
+    body #app #page #selector .legendary {
+      background-image: url(img/c8a1414d89358c31dc8c5951496d4fbe.svg); }
+    body #app #page #selector #selectIcon {
+      width: 20px;
+      height: 20px;
+      background-image: url(img/e00fc80d7490b24314004c579c256719.svg);
+      float: right; }
+  body #app #page #body {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1;
+    position: relative; }
+    body #app #page #body #settings {
+      width: 500px;
+      height: calc(100% - 130px);
+      margin: 20px 0 0 20px;
+      padding: 20px;
+      background: white;
+      float: right;
+      overflow-y: scroll; }
+      body #app #page #body #settings #container {
+        width: calc(100% - 10px);
+        border: 1px solid black;
+        list-style: none;
+        padding: 5px;
+        margin: 0;
+        margin-bottom: 10px; }
+        body #app #page #body #settings #container:last-child {
+          margin-bottom: 0; }
+        body #app #page #body #settings #container li {
+          min-height: 25px;
+          font-size: 16px;
+          margin: 9.5px;
+          display: flex;
+          flex-wrap: wrap; }
+          body #app #page #body #settings #container li button {
+            padding: 5px;
+            margin-right: 5px; }
+          body #app #page #body #settings #container li #label {
+            width: 100px;
+            margin: 0;
+            font-size: 16px;
+            padding: 4.5px; }
+          body #app #page #body #settings #container li #note {
+            width: 50px;
+            margin: 0; }
+          body #app #page #body #settings #container li .name {
+            width: calc(100% - 115px); }
+          body #app #page #body #settings #container li .hitDiceAmount, body #app #page #body #settings #container li .ac, body #app #page #body #settings #container li .distance {
+            width: 40px;
+            margin-right: 5px; }
+          body #app #page #body #settings #container li .hitModifier, body #app #page #body #settings #container li .senses {
+            width: 60px;
+            margin-right: 5px; }
+          body #app #page #body #settings #container li .totalHP {
+            width: 40px; }
+          body #app #page #body #settings #container li .margin {
+            margin-right: 5px; }
+          body #app #page #body #settings #container li input {
+            padding: 5px; }
+          body #app #page #body #settings #container li button {
+            border: none;
+            background-color: #FF5151;
+            color: white;
+            cursor: pointer;
+            padding: 5px 10px;
+            font-size: 14px; }
+          body #app #page #body #settings #container li table {
+            width: 100%; }
+            body #app #page #body #settings #container li table th, body #app #page #body #settings #container li table td {
+              padding: 5px;
+              text-align: center; }
+              body #app #page #body #settings #container li table th input, body #app #page #body #settings #container li table td input {
+                width: 100%;
+                text-align: center; }
+          body #app #page #body #settings #container li p {
+            font-size: 16px;
+            padding: 4.5px;
+            margin: 0; }
+          body #app #page #body #settings #container li #speedContainer {
+            width: calc(100% - 100px);
+            min-height: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+            margin-left: 110px; }
+            body #app #page #body #settings #container li #speedContainer #speed-item {
+              margin: 0;
+              margin-right: 5px;
+              margin-bottom: 5px;
+              background-color: #FF9E9E;
+              color: white;
+              font-size: 12px;
+              width: 150px;
+              height: 30px;
+              display: flex; }
+              body #app #page #body #settings #container li #speedContainer #speed-item p {
+                flex: 1;
+                overflow: hidden; }
+              body #app #page #body #settings #container li #speedContainer #speed-item #buttons {
+                padding: 5px; }
+                body #app #page #body #settings #container li #speedContainer #speed-item #buttons button {
+                  width: 20px;
+                  height: 20px;
+                  padding: 0;
+                  border: none;
+                  margin: 0; }
+                body #app #page #body #settings #container li #speedContainer #speed-item #buttons .edit {
+                  background-image: url(img/bc254d27f36fdd174344e76d09780b4c.svg);
+                  background-size: cover;
+                  margin-right: 5px; }
+                body #app #page #body #settings #container li #speedContainer #speed-item #buttons .remove {
+                  background-image: url(img/dc789a17d935eeee035570f31890e1ea.svg);
+                  background-size: cover;
+                  margin: 0; }
+              body #app #page #body #settings #container li #speedContainer #speed-item #actionType, body #app #page #body #settings #container li #speedContainer #speed-item #damType {
+                width: 20px;
+                height: 20px;
+                margin: 5px; }
+              body #app #page #body #settings #container li #speedContainer #speed-item .regular {
+                background-image: url(img/58f040ff3324a9ba1d55d1c1acca038b.svg); }
+              body #app #page #body #settings #container li #speedContainer #speed-item .attack {
+                background-image: url(img/8e8ab6642c1e99e5c80484be5479c96a.svg); }
+              body #app #page #body #settings #container li #speedContainer #speed-item .reaction {
+                background-image: url(img/6589be7d8496df367490c28166551667.svg); }
+              body #app #page #body #settings #container li #speedContainer #speed-item .legendary {
+                background-image: url(img/c8cbcb77b573308e91c9523143389c05.svg); }
+              body #app #page #body #settings #container li #speedContainer #speed-item .immunity {
+                background-image: url(img/fb8e307a312ef79d776d392570cb2c16.svg); }
+              body #app #page #body #settings #container li #speedContainer #speed-item .resistance {
+                background-image: url(img/73c50802ca49b7b6ec65c8b92b81b4e9.svg); }
+              body #app #page #body #settings #container li #speedContainer #speed-item .vulnerability {
+                background-image: url(img/f911e55b1c25a8b68307396b8742d05d.svg); }
+            body #app #page #body #settings #container li #speedContainer #speed-item2 {
+              margin: 0;
+              margin-right: 5px;
+              margin-bottom: 5px;
+              background-color: #FF9E9E;
+              color: white;
+              font-size: 12px;
+              width: 200px;
+              height: 30px;
+              display: flex; }
+              body #app #page #body #settings #container li #speedContainer #speed-item2 p {
+                flex: 1;
+                overflow: hidden; }
+              body #app #page #body #settings #container li #speedContainer #speed-item2 #buttons {
+                padding: 5px; }
+                body #app #page #body #settings #container li #speedContainer #speed-item2 #buttons button {
+                  width: 20px;
+                  height: 20px;
+                  padding: 0;
+                  border: none;
+                  margin: 0; }
+                  body #app #page #body #settings #container li #speedContainer #speed-item2 #buttons button:first-child {
+                    margin-right: 5px; }
+                body #app #page #body #settings #container li #speedContainer #speed-item2 #buttons .edit {
+                  background-image: url(img/bc254d27f36fdd174344e76d09780b4c.svg);
+                  background-size: cover; }
+                body #app #page #body #settings #container li #speedContainer #speed-item2 #buttons .remove {
+                  background-image: url(img/dc789a17d935eeee035570f31890e1ea.svg);
+                  background-size: cover; }
+          body #app #page #body #settings #container li #checkbox {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            width: calc(100% - 110px);
+            margin-bottom: 10px; }
+            body #app #page #body #settings #container li #checkbox li {
+              width: 50%;
+              margin: 0;
+              padding: 0; }
+              body #app #page #body #settings #container li #checkbox li input {
+                margin: 10px; }
+    body #app #page #body #preview-frame {
+      width: calc(100% - 600px);
+      height: calc(100% - 90px);
+      margin: 20px 0 0 20px;
+      background-color: #566573;
+      user-select: none; }
+      body #app #page #body #preview-frame #tool-bar {
+        width: 100%;
+        height: 40px;
+        background-color: #3e4954; }
+        body #app #page #body #preview-frame #tool-bar select {
+          height: 20px;
+          margin: 10px; }
+        body #app #page #body #preview-frame #tool-bar button {
+          margin: 5px; }
+      body #app #page #body #preview-frame #viewer {
+        overflow: hidden; }
+        body #app #page #body #preview-frame #viewer #placeholder {
+          display: run-in; }
+    body #app #page #body #popup {
+      width: 100%;
+      height: calc(100% + 50px);
+      margin-top: -50px;
+      background-color: rgba(55, 55, 55, 0.6);
+      z-index: 2;
+      position: fixed; }
+      body #app #page #body #popup #container {
+        width: 800px;
+        margin: 70px auto;
+        background-color: white; }
+        body #app #page #body #popup #container #header {
+          background-color: #FF5151;
+          display: flex;
+          flex-wrap: nowrap; }
+          body #app #page #body #popup #container #header h1 {
+            margin: 0;
+            color: white;
+            width: calc(100% - 50px);
+            padding: 3px 10px; }
+          body #app #page #body #popup #container #header button {
+            width: 50px;
+            height: 50px;
+            border: none;
+            background-color: #FF5151;
+            font-size: 24;
+            color: white;
+            font-weight: bold;
+            background-image: url(img/dc789a17d935eeee035570f31890e1ea.svg);
+            background-size: cover; }
+            body #app #page #body #popup #container #header button:hover {
+              background-color: #FF9E9E;
+              cursor: pointer; }
+        body #app #page #body #popup #container section {
+          background-color: whitesmoke;
+          padding: 20px; }
+        body #app #page #body #popup #container #ability textarea {
+          width: 100%;
+          height: 300px;
+          padding: 5px;
+          resize: none; }
+        body #app #page #body #popup #container #ability input {
+          width: 100%;
+          margin-bottom: 20px;
+          padding: 5px; }
+        body #app #page #body #popup #container #ability button {
+          border: none;
+          background-color: #FF5151;
+          color: white;
+          cursor: pointer;
+          padding: 5px 10px;
+          margin-top: 20px;
+          font-size: 18px;
+          margin-left: calc(100% - 50px); }
+        body #app #page #body #popup #container #action button {
+          border: none;
+          background-color: #FF5151;
+          color: white;
+          cursor: pointer;
+          padding: 5px 10px;
+          font-size: 18px;
+          margin-left: calc(100% - 52px); }
+          body #app #page #body #popup #container #action button:hover {
+            background-color: #FF9E9E; }
+        body #app #page #body #popup #container #action #attack {
+          padding: 0;
+          list-style: none; }
+          body #app #page #body #popup #container #action #attack li {
+            margin: 10px;
+            display: flex; }
+            body #app #page #body #popup #container #action #attack li label {
+              width: 150px; }
+        body #app #page #body #popup #container #action #regular input, body #app #page #body #popup #container #action #regular textarea {
+          width: calc(100% - 20px);
+          margin: 10px 0 10px 10px; }
+        body #app #page #body #popup #container #action #regular textarea {
+          height: 300px;
+          resize: none; }
